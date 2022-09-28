@@ -10,7 +10,7 @@ app.use(express.static(path.resolve(__dirname, '../client/build')))
 
 app.get('/image', (req, res) => {
     if (new Date() >= new Date('10/13/2022 00:00 AM') ) {
-        res.status(200).sendFile('./secret_image.png')
+        res.status(200).sendFile(path.resolve(__dirname, './secret_image.png'))
     } else {
         res.status(403).send("Don't try to be sneaky. Bitch.")
     }
