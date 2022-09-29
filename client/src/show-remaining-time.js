@@ -22,13 +22,13 @@ function ShowRemainingTime() {
     }, 10)
 
     return (<>
-        {days} days,
+        {days > 0 ? days : 0} days,
         <br/>
-        {hours} hours,
+        {hours > 0 ? hours : 0} hours,
         <br/>
-        {minutes} minutes,
+        {minutes > 0 ? minutes : 0} minutes,
         <br/>
-        and {seconds} seconds.
+        and {seconds > 0 ? seconds : 0} seconds...
     </>)
 }
 
